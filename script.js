@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updatePreview() {
         previewName.textContent = nameInput.value || 'First Last';
         previewTitle.textContent = titleInput.value || 'Job Title';
-        previewCompany.textContent = 'BIG IP & Legal Solutions';
+        previewCompany.textContent = 'Protranslating';
         previewPhone.textContent = phoneInput.value || '+1.XXX.XXX.XXXX';
         
         if (pronounsCheckbox.checked && pronounsInput.value) {
