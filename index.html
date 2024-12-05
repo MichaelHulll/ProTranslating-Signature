@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>BIG Signature Simple (w/ Fonts)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Signature Generator</title>
+    <!-- Font-face definitions for Aptos -->
+    <style>
+        @font-face {
+            font-family: 'Aptos';
+            src: url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Regular.woff2') format('woff2'),
+                 url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Aptos';
+            src: url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Bold.woff2') format('woff2'),
+                 url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        /* General styles */
+        body {
+            font-family: Aptos, Helvetica, Arial, sans-serif;
+        }
+    </style>
+    <!-- Link to the self-hosted Aptos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Your Signature Details</h2>
+        <form id="signatureForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="First Last" required><br>
+
+            <label for="pronouns">Pronouns:</label>
+            <input type="checkbox" id="pronouns-checkbox" style="margin-right: 10px;">
+            <label for="pronouns" style="display: inline;">Pronouns (optional)</label><br>
+            <input type="text" id="pronouns" placeholder="(e.g., she/her)" disabled><br>
+
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" placeholder="Job Title" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="+1.XXX.XXX.XXXX" required><br>
+
+            <label for="phone-type">Phone Type:</label>
+            <select id="phone-type">
+                <option value="mobile" selected>Mobile</option>
+                <option value="office">Office</option>
+            </select><br>
+        </form>
+
+        <!-- Button to copy the signature -->
+        <button id="copySignatureBtn" style="margin-top: 20px; padding: 10px 20px; background-color: #3BB1C9; color: white; border: none; cursor: pointer;">Copy Your Signature</button>
+    </div>
+
+    <div class="signature-preview">
+        <h2>Preview:</h2>
+        <div id="signature">
+            <table id="signature-table" border="0" cellpadding="0" cellspacing="0" style="font-family: Aptos, Helvetica, Arial, 'Microsoft Sans Serif', Tahoma, Verdana, sans-serif; width: 300px; border-spacing: 0; margin: 0;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table id="contact-info" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0; margin: 0;">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 18px; line-height: 24px; font-weight: normal; padding-bottom: 4px;">
+                                            <p style="margin: 0;">
+                                                <span id="preview-name" style="color: #1D3447; font-weight: bold;">First Last</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr id="preview-pronouns-row" style="display: none;">
+                                        <td style="font-size: 16px; font-weight: normal; padding-bottom: 3px;">
+                                            <p style="margin: 0; color: #404040;" id="preview-pronouns">Pronouns</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 16px; font-weight: normal; padding-bottom: 3px;">
+                                            <p style="margin: 0;">
+                                                <span id="preview-title" style="color: #404040;">Job Title</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 16px; font-weight: 400; padding-bottom: 16px;">
+                                            <p style="margin: 0;">
+                                                <span id="preview-company" style="color: #404040;">BIG IP & Legal Solutions</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color: #3BB1C9; height: 2px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-bottom: 14px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 16px; font-weight: 400; padding-bottom: 3px;">
+                                            <p style="margin: 0;">
+                                                <span id="preview-phone-prefix" style="font-weight: 700; color: #404040;">m:</span>
+                                                <span id="preview-phone" style="color: #404040;">+1.XXX.XXX.XXXX</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 16px; font-weight: 400; padding-bottom: 22px;">
+                                            <p style="margin: 0;">
+                                                <a href="https://big-ip.com/" target="_blank" rel="nofollow" style="color: #404040; text-decoration: none;" id="preview-email">
+                                                    big-ip.com </a></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0px!important;">
+        <table id="inner-table" border="0" cellpadding="0" cellspacing="0" style="font-family:Aptos,Helvetica,Arial,'Microsoft Sans Serif',sans-serif;line-height:0px;font-size:3px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
+          <tbody>
+            <tr>
+              <td style="border-collapse: collapse; line-height: 0px; padding-bottom: 9px;">
+                <p style="margin: 0.04px;"><a style="font-size:0px;line-height:0px;" target="_blank" rel="nofollow" href="https://big-ip.com/"><img height="73" width="150" alt="image" border="0" src="https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/Assets/BIG%20IP_Email%20Logo.png
+"></a></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+</table>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

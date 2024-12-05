@@ -1,0 +1,73 @@
+/* Font-face definitions for Aptos */
+@font-face {
+    font-family: 'Aptos';
+    src: url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Regular.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Regular.woff') format('woff'),
+         url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Regular.ttf') format('truetype');
+    font-weight: normal; /* Regular weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aptos';
+    src: url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Bold.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Bold.woff') format('woff'),
+         url('https://raw.githubusercontent.com/MichaelHulll/BIGSignature/main/fonts/Aptos-Bold.ttf') format('truetype');
+    font-weight: bold; /* Bold weight */
+    font-style: normal;
+}
+
+/* General styles for the body */
+body {
+    font-family: Aptos, Helvetica, Arial, sans-serif;
+    font-weight: normal; /* Default font weight */
+}
+
+/* Style for the form container */
+.form-container {
+    font-family: Aptos, Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #1D3447;
+    font-family: Aptos, Helvetica, Arial, sans-serif;
+    font-weight: normal; /* Ensure h2 is not bold by default */
+}
+
+label {
+    font-size: 14px;
+    color: #404040;
+    margin-right: 10px;
+    font-family: Aptos, Arial, sans-serif;
+    font-weight: normal; /* Ensure label text is not bold */
+}
+
+input, select {
+    font-size: 14px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-family: Aptos, Arial, sans-serif;
+    font-weight: normal; /* Ensure form inputs are not bold */
+}
+
+/* Style for the preview section */
+.signature-preview {
+    margin-top: 30px;
+}
+
+#signature {
+    font-family: Aptos, Helvetica, Arial, 'Microsoft Sans Serif', Tahoma, Verdana, sans-serif;
+    width: 300px;
+    font-size: 16px;
+    font-weight: normal; /* Ensure signature text is not bold */
+}
+
+#signature h1, #signature h2, #signature h3, #signature h4, #signature h5, #signature h6 {
+    font-weight: normal; /* Ensure headings are not bold by default */
+}
+
+/* Add any other necessary styles below */
