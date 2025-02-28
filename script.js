@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (pronounsCheckbox.checked && pronounsInput.value) {
             previewPronouns.textContent = pronounsInput.value;
-            previewPronounsRow.style.display = 'table-row';  // Show pronouns row
+            previewPronouns.style.display = 'block';  // Show pronouns row
         } else {
-            previewPronounsRow.style.display = 'none';  // Hide pronouns row if not checked
+            previewPronouns.style.display = 'none';  // Hide pronouns row if not checked
         }
     }
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             pronounsInput.disabled = true;
             pronounsInput.value = '';  
-            previewPronounsRow.style.display = 'none';  
+            previewPronouns.style.display = 'none';  
         }
         updatePreview();  
     }
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             previewPhonePrefix.textContent = 'm:';  
         }
-        updatePreview();  
+        updatePreview();
     }
 
     // Initial check to set the form state properly
